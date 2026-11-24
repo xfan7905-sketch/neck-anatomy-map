@@ -1,0 +1,756 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#f6f4ee">
+<meta name="description" content="用可点击的解剖图逐段学习颈部神经、动脉、静脉和淋巴的走向。">
+<title>颈部解剖地图</title>
+<style>
+:root{color-scheme:light;--paper:#f6f4ee;--card:#fffefa;--ink:#202d2a;--muted:#52655f;--line:#dce1d8;--teal:#214f45;--teal-dark:#173c34;--artery:#ad3e38;--vein:#31678e;--nerve:#8a580b;--lymph:#367352;--land:#52625c;--radius:20px;font-family:Inter,"PingFang SC","Microsoft YaHei",system-ui,sans-serif}
+*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);line-height:1.65}button,a{touch-action:manipulation}button{font:inherit;color:inherit;cursor:pointer}button:disabled{cursor:default;opacity:.48}button:focus-visible,a:focus-visible,[tabindex]:focus-visible{outline:3px solid #a65e19;outline-offset:3px}a{color:var(--teal)}[hidden]{display:none!important}.shell{width:min(1140px,calc(100% - 48px));margin:auto}.top{border-bottom:1px solid var(--line)}.top .shell{min-height:66px;display:flex;align-items:center;justify-content:space-between;gap:12px}.brand{display:flex;align-items:center;gap:10px;font-weight:750;letter-spacing:.03em}.mark{display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:var(--teal);color:white}.mark svg{width:21px;height:21px}.top a{font-size:.85rem;text-underline-offset:4px}.intro{margin:30px 0 22px;padding:30px 36px;border-radius:24px;background:#e6eee5;display:flex;align-items:end;justify-content:space-between;gap:20px}.intro h1{font-size:clamp(2rem,5vw,3.45rem);line-height:1.13;letter-spacing:-.045em;margin:0 0 10px;font-weight:820;color:#19392f}.intro p{margin:0;color:#344d43}.primary,.plain,.chip,.lesson,.choice,.route,.step{border:1px solid var(--line);border-radius:11px;background:var(--card);min-height:44px}.primary{background:var(--teal);color:#fff;border-color:var(--teal);padding:8px 15px;font-weight:720}.primary:hover{background:var(--teal-dark)}.plain,.chip{padding:7px 11px}.plain:hover,.chip:hover,.lesson:hover,.route:hover,.choice:hover,.step:hover{border-color:#809c8c;background:#f0f5ee}.chip[aria-pressed=true],.plain[aria-pressed=true]{background:#e5efe5;border-color:#82a090;color:#194a3a;font-weight:720}.micro{font-size:.83rem;color:var(--muted)}.intro .plain{white-space:nowrap}.lessons{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:7px;margin-bottom:17px}.lesson{padding:9px 6px;font-weight:680;font-size:.91rem}.lesson[aria-pressed=true]{background:var(--teal);border-color:var(--teal);color:white}.study{display:grid;grid-template-columns:minmax(0,1.45fr) minmax(0,1fr);gap:16px;align-items:start;scroll-margin-top:12px}.panel{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}.panel-head{padding:17px 18px 12px;display:flex;justify-content:space-between;align-items:start;gap:10px}.panel-head h2,.section h2{margin:0;font-size:1.28rem;line-height:1.35}.panel-head p{margin:4px 0 0}.scene-tools{display:flex;flex-wrap:wrap;gap:5px;padding:0 16px 9px}.scene-tools .chip{font-size:.84rem}.stage{position:relative;background:#f2f1ea;margin:0 13px;border-radius:15px;overflow:hidden;border:1px solid #e6e7df}.stage svg{display:block;width:100%;height:auto;aspect-ratio:480 / 390;overflow:visible}.stage-caption{font-size:.83rem;color:var(--muted);margin:7px 16px 0;min-height:2.7em}.legend{display:flex;flex-wrap:wrap;gap:5px 14px;padding:8px 16px 14px;font-size:.8rem;color:var(--muted)}.legend span{display:flex;align-items:center;gap:5px}.key{display:inline-block;width:18px;border-top:3px solid var(--tone);border-radius:2px}.key.nerve{border-top-style:dashed}.key.lymph{border-top-style:dotted}.key.base{border-color:#7b877d}.controls{padding:11px 14px;border-block-start:1px solid var(--line);display:flex;flex-wrap:wrap;gap:6px;align-items:center}.controls .plain,.controls .primary{font-size:.86rem;padding-inline:9px}.counter{margin-left:auto;font-size:.81rem;color:var(--muted);white-space:nowrap}.detail{padding:16px 17px 17px}.detail h2,.detail h3{line-height:1.4;margin:0}.detail h2{font-size:1.28rem}.detail h3{font-size:1.1rem}.detail p{margin:5px 0 0}.route-grid{display:flex;flex-wrap:wrap;gap:6px;margin:12px 0 15px}.route{display:inline-flex;align-items:center;gap:6px;padding:6px 9px;font-size:.86rem;text-align:left}.route[aria-pressed=true]{background:#e8efe8;border-color:#779686;font-weight:750}.dot{width:8px;height:8px;background:var(--tone);display:inline-block;border-radius:50%;flex:none}.route-info{border-top:1px solid var(--line);padding-top:13px}.route-info .micro{margin:4px 0 9px}.steps{display:grid;gap:5px;margin-top:10px}.step{width:100%;text-align:left;padding:7px 9px;display:grid;grid-template-columns:1.55rem auto;gap:4px;font-size:.87rem;line-height:1.45}.step .num{display:grid;place-items:center;width:21px;height:21px;border-radius:50%;background:#eef0e9;color:var(--teal);font-size:.76rem;font-weight:750}.step[aria-current=step]{border-color:#769987;background:#eaf2e9}.step[aria-current=step] .num{color:white;background:var(--teal)}.step b{display:block}.step small{display:block;font-size:.81rem;color:var(--muted);margin-top:2px}.below{display:grid;grid-template-columns:1.15fr 1fr;gap:16px;margin-top:16px}.section{padding:17px 18px}.section h2{margin-bottom:6px}.notes{display:grid;gap:7px}.note{padding:9px 0;border-bottom:1px solid var(--line)}.note:last-child{border:0;padding-bottom:0}.note h3{margin:0;font-size:.96rem}.note p{margin:3px 0 0;font-size:.9rem;color:var(--muted)}.question{padding:10px 0;border-bottom:1px solid var(--line)}.question:last-child{border:0;padding-bottom:0}.question p{margin:0 0 7px;font-weight:650}.answers{display:flex;flex-wrap:wrap;gap:6px}.choice{padding:5px 9px;font-size:.85rem;text-align:left}.choice.correct{background:#e7f0e6;border-color:#557e60}.choice.wrong{background:#fbefeb;border-color:#b36e60}.feedback{font-size:.84rem;color:var(--muted);margin-top:5px;min-height:1.3em}.locate{margin-top:6px;font-size:.83rem}.foot{margin:26px 0 34px;border-top:1px solid var(--line);padding-top:10px;color:var(--muted);font-size:.82rem}.foot summary{cursor:pointer;min-height:44px;display:list-item;align-content:center}.foot p{margin:0 0 10px}.overview-areas{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}.stage .region{cursor:pointer}.stage .region rect{fill:#fffefa;stroke:#78988b;stroke-width:1}.stage .region:hover rect,.stage .region:focus rect{fill:#dcebdc;stroke:#274e40;stroke-width:2}.stage .region text{fill:#204c3d;font-weight:750;font-size:12px}.stage .label text{fill:#263b33;font-weight:650;font-size:12px;paint-order:stroke;stroke:#f2f1ea;stroke-width:3.5;stroke-linejoin:round}.stage .label line{stroke:#758478;stroke-width:.9}.stage .label circle{fill:#758478}.stage .trace{fill:none;stroke-linecap:round;stroke-linejoin:round}.stage .trace.nerve{stroke-dasharray:6 3}.stage .trace.lymph{stroke-dasharray:2 4}.stage .trace.deep{stroke-dasharray:3 4}.stage .trace.muted{opacity:.12}.stage .trace.pending{opacity:.34}.stage .trace.done{opacity:.65}.stage .trace.active{opacity:1}.stage .flow{opacity:.94}.stage .endpoint{fill:var(--card);stroke-width:2}.stage .drawn .region:focus{outline:none}.sr{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+@media(max-width:840px){.shell{width:calc(100% - 28px)}.intro{padding:22px}.lessons{grid-template-columns:repeat(3,minmax(0,1fr))}.study{grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:10px}.below{gap:10px}.detail{padding:13px}.panel-head{padding:13px 13px 8px}}
+@media(max-width:660px){.shell{width:calc(100% - 20px)}.top .shell{min-height:52px}.mark{width:29px;height:29px}.brand{font-size:.9rem}.intro{margin:13px 0 11px;padding:17px 14px;border-radius:17px;align-items:start;flex-direction:column;gap:9px}.intro h1{font-size:2rem;margin-bottom:5px}.intro p{font-size:.9rem}.intro .plain{min-height:44px}.lessons{margin-bottom:9px;gap:5px}.lesson{font-size:.79rem;line-height:1.3}.study{grid-template-columns:minmax(0,1fr);gap:9px}.below{grid-template-columns:1fr;margin-top:9px}.stage{margin-inline:8px}.panel{border-radius:15px}.scene-tools{padding-inline:10px}.stage-caption{margin-inline:11px}.legend{padding-inline:11px}.controls{padding-inline:8px;gap:4px}.controls .plain,.controls .primary{padding-inline:7px}.counter{font-size:.75rem}.study,.quiz{scroll-margin-top:8px}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
+</style>
+<style>
+.stage .label text{font-size:13.5px}
+.stage-step{padding:8px 15px 11px;color:var(--muted);font-size:.85rem;margin:0}.stage-step b{color:var(--ink)}
+@media(max-width:660px){#scene-tools{padding-bottom:6px}.panel>#routes{padding:0 10px;margin:0 0 8px;gap:4px}.panel>#routes .route{font-size:.8rem;padding-inline:7px}.stage-step{padding-inline:11px}.stage .label text{stroke-width:3px}}
+</style>
+</head>
+<body>
+<header class="top"><div class="shell"><div class="brand"><span class="mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21V10m0 5-6-6V4m6 6 6-6m-6 8 6 4v4" stroke-linecap="round"/><circle cx="12" cy="10" r="2" fill="currentColor"/></svg></span>局部解剖</div><a href="#sources">教材与图注</a></div></header>
+<main class="shell">
+<section class="intro"><div><h1>颈部解剖地图</h1><p>先认地标，再沿着神经和血管看它们怎么走。</p></div><button class="plain" id="overview">返回总览</button></section>
+<nav class="lessons" id="lessons" aria-label="学习章节"></nav>
+<div class="study" id="study">
+<section class="panel" aria-labelledby="scene-title">
+<div class="panel-head"><div><h2 id="scene-title"></h2><p class="micro" id="orientation"></p></div></div>
+<div class="scene-tools" id="scene-tools" aria-label="切换视图"></div>
+<div class="stage" id="stage"></div><p class="stage-caption" id="scene-caption"></p>
+<div class="legend" aria-label="图例"><span><i class="key" style="--tone:var(--artery)"></i>动脉</span><span><i class="key" style="--tone:var(--vein)"></i>静脉</span><span><i class="key nerve" style="--tone:var(--nerve)"></i>神经</span><span><i class="key lymph" style="--tone:var(--lymph)"></i>淋巴</span><span id="duct-key" hidden><i class="key base"></i>腺管</span></div>
+<div class="controls" id="controls" aria-label="路线播放控制"><button class="primary" id="play" aria-label="播放路线">▶ 播放</button><button class="plain" id="prev">上一步</button><button class="plain" id="next">下一步</button><button class="plain" id="replay">重播</button><span class="counter" id="counter"></span></div>
+<p class="stage-step" id="stage-step" hidden></p>
+</section>
+<section class="panel detail" id="detail" aria-labelledby="detail-title"><h2 id="detail-title"></h2><p class="micro" id="detail-intro"></p><div class="route-grid" id="routes"></div><div class="route-info" id="route-info"></div></section>
+</div>
+<div class="below" id="below" hidden><section class="panel section" aria-labelledby="notes-title"><h2 id="notes-title">图旁笔记</h2><div class="notes" id="notes"></div></section><section class="panel section quiz" aria-labelledby="quiz-title"><h2 id="quiz-title">看图自测</h2><div id="quiz"></div></section></div>
+<footer class="foot"><details id="sources"><summary>教材与图注</summary><p>内容依据《第二章 颈部》附件，教材第 41–59 页。图为原创学习示意，位置经过简化。页码均指教材印刷页码。浅深与交叉以图注为准。</p><p>附件开头接续前页，末页停在解剖操作中途。图文覆盖附件所见的知识点，标本部分用于复习辨认。</p></details></footer>
+</main>
+<div id="announce" class="sr" role="status"></div>
+<script>
+const R = (id, name, type, view, source, purpose, steps) => ({ id, name, type, view, source, purpose, steps });
+const S = (title, text, ...paths) => ({ title, text, paths });
+const Q = (ask, options, correct, reason, route, step) => ({ ask, options, correct, reason, route, step });
+const chapters = [
+{
+ id:"layers", name:"浅层与筋膜", source:"第 41–43 页 · 图 2-5 至 2-7",
+ intro:"先用胸锁乳突肌定位置。它从耳后斜向颈前下方，浅静脉和皮神经在它附近各走各的路。",
+ views:["surface","fascia","spaces"],
+ routes:[
+ R("ejv","颈外静脉","vein","surface","第 41 页","收集耳后、头皮等处的静脉血，往锁骨下方回流。",[
+ S("下颌角附近汇合","下颌后静脉后支与耳后静脉等在这里汇成颈外静脉。","M177 129 Q185 144 192 153"),
+ S("贴着胸锁乳突肌表面下行","它经过这块斜肌的浅面，位置离皮肤较近。","M192 153 Q210 185 196 218 T186 272"),
+ S("到锁骨上方穿深筋膜","继续向下接入锁骨下静脉或静脉角。","M186 272 Q179 300 165 320")]),
+ R("ajv","颈前静脉","vein","surface","第 41、43 页","收集颈前浅层的静脉血。左右常由一条小横桥相连。",[
+ S("从下巴下方起步","沿颈前正中线两旁下行，位置比颈外静脉更靠前、更靠近中线。","M303 148 Q289 205 294 266"),
+ S("在胸骨上方转向外侧","两侧之间可通过颈静脉弓相连，再汇入颈外静脉末端或锁骨下静脉等。","M294 266 Q294 293 264 298 L225 301","M294 285 L319 285")]),
+ R("cutaneous","颈丛四组皮支","nerve","surface","第 41、56、58 页","把枕部、耳旁、颈前、肩和上胸部的皮肤感觉带回。",[
+ S("共同出口","四组皮支的浅出位置聚集在胸锁乳突肌后缘中点附近。","M149 215 Q160 213 174 214"),
+ S("枕小神经向后上","靠着胸锁乳突肌后缘上行，到枕部及耳背上部。","M174 214 Q146 180 138 109"),
+ S("耳大神经向耳旁","绕过肌后缘，沿肌肉表面向耳郭和腮腺区走。","M174 214 Q193 179 178 111"),
+ S("颈横神经向前","横过胸锁乳突肌中段，去颈前区皮肤。","M174 214 Q221 223 274 220"),
+ S("锁骨上神经向下外","分几支越过锁骨，去颈前外侧、肩和上胸部皮肤。","M174 214 Q154 255 124 310","M174 214 Q178 270 166 324","M174 214 Q150 246 90 294")]),
+ R("facialneck","面神经颈支","nerve","surface","第 41、46、58 页","支配颈阔肌，帮助牵动颈部皮肤。",[
+ S("从腮腺下缘浅出","从耳前下方的腮腺区域出来，向前下方走。","M186 108 Q206 136 227 150"),
+ S("沿颈阔肌深面展开","这条是去颈阔肌的运动支，和颈丛皮支可以在同一区域看到。","M227 150 Q254 155 273 181 L282 193","M227 150 Q238 177 241 196")])
+ ],
+ notes:[
+ ["两种「浅」","颈浅筋膜是皮下的疏松层，颈阔肌位于其中。颈深筋膜的浅层叫封套筋膜，已经在颈阔肌深面，包绕胸锁乳突肌和斜方肌，也形成下颌下腺的鞘。"],
+ ["把颈部切成一片来看","教材把颈深筋膜分为浅、中、深三层。中层围着喉、气管、咽、食管和甲状腺等，深层即椎前筋膜，覆盖颈深肌。横切图由前往后找气管、食管、颈深肌和颈椎。"],
+ ["四个间隙放在哪","胸骨上间隙在下颈部封套筋膜的两层之间，里面有颈静脉弓。气管前间隙在气管前，可见甲状腺下静脉等。教材所示咽后间隙在咽后、椎前筋膜前，椎前间隙在椎前筋膜深面，靠近颈深肌与颈椎。"]
+ ],
+ quiz:[Q("哪条静脉贴着胸锁乳突肌表面下行？",["颈内静脉","颈外静脉","甲状腺下静脉"],1,"颈外静脉在胸锁乳突肌浅面，走到锁骨附近才穿深筋膜。","ejv",1),
+ Q("从胸锁乳突肌后缘出来后，哪组皮支向肩和上胸走？",["颈横神经","耳大神经","锁骨上神经"],2,"锁骨上神经向下外走并分支越过锁骨。","cutaneous",4)]
+},
+{
+ id:"jaw",name:"下巴下面",source:"第 44、59 页 · 图 2-8",views:["jaw"],
+ intro:"把下颌骨和二腹肌当作边框，再用舌骨舌肌当作分隔板，就能分清好几条看起来重叠的路线。",
+ routes:[
+ R("faciala","面动脉","artery","jaw","第 44、59 页","把动脉血送往面部。",[
+ S("从颈外动脉分出","在舌骨大角附近起步，从二腹肌后腹的深面进入下颌下三角。","M141 275 Q152 231 196 208"),
+ S("贴着下颌下腺深面向前","在腺体与下颌骨附近继续走向咬肌前缘。","M196 208 Q239 189 276 166"),
+ S("翻过下颌骨下缘到脸上","在咬肌前缘绕过骨下缘，转向面部上行。","M276 166 Q296 160 293 137 Q288 112 309 92")]),
+ R("lingualn","舌神经","nerve","jaw","第 44、59 页 · 图 2-8","把舌前部的一般感觉带回，例如触觉。",[
+ S("从腺体深部的内上方前行","在口底先到下颌下腺管后上方。","M172 128 Q206 126 232 150"),
+ S("从腺管外侧绕到内侧","向前经腺管外侧，向下从管下方绕过去，转到内侧。","M232 150 Q245 161 249 179 Q267 190 280 164"),
+ S("继续向前进入舌","从管的内侧继续前行，去舌。","M280 164 Q309 154 343 128")]),
+ R("duct","下颌下腺管","base","jaw","第 44、59 页","把下颌下腺分泌的唾液送入口腔。",[
+ S("由下颌下腺深部发出","腺的浅部与深部绕着下颌舌骨肌后缘相接，管子从深部的前端出发。","M203 202 Q220 179 246 170"),
+ S("在下颌舌骨肌深面前行","向前开口于舌系带两旁附近的舌下阜。","M246 170 Q298 166 351 163")]),
+ R("hypojaw","舌下神经","nerve","jaw","第 44–45、59 页","主要控制舌肌运动。",[
+ S("从二腹肌后腹深面过来","从颈动脉三角向前转到下颌下三角，在下颌下腺内下方找它。","M127 259 Q154 245 188 241"),
+ S("沿舌骨舌肌浅面进舌","把舌骨舌肌想成一块分隔板，舌下神经在较靠外的一面。","M188 241 Q264 247 319 221 L346 205")]),
+ R("linguala","舌动脉","artery","jaw","第 44–45、59 页","把动脉血送往舌。",[
+ S("从颈外动脉起步","在舌骨大角上方附近向前上走，邻近舌下神经。","M141 275 Q155 224 187 220"),
+ S("钻到舌骨舌肌深面","从肌后缘进入深面继续向前，到舌内供血。","M187 220 Q245 216 287 204 T341 188")])
+ ],
+ notes:[
+ ["两个三角怎么认","颏下三角在正中，边界是左右二腹肌前腹和舌骨体。下颌下三角在两侧，边界换成同侧二腹肌前腹、后腹及下颌骨下缘。"],
+ ["两组常混在一起的走向","舌神经绕的是下颌下腺管。舌下神经与舌动脉的深浅，要拿舌骨舌肌作参照：神经在浅面，动脉在深面。"],
+ ["腺体旁边还有什么","下颌下神经节连在舌神经下方，给下颌下腺和舌下腺发支。下颌下腺周围有淋巴结，归入颈深淋巴回流路线。"]
+ ],
+ quiz:[Q("舌动脉到舌骨舌肌后缘后，向哪一面走？",["浅面","深面","穿过肌肉正中央"],1,"舌动脉从肌后缘潜入深面。舌下神经走肌表面。","linguala",1),
+ Q("绕过下颌下腺管的是哪条神经？",["舌下神经","膈神经","舌神经"],2,"舌神经经腺管外侧、从下方绕到内侧。","lingualn",1)]
+},
+{
+ id:"carotid",name:"颈动脉与颈动脉鞘",source:"第 45–47、52–53、59 页 · 图 2-9、2-10、2-18",views:["carotid","sheath"],
+ intro:"先在侧面图找动脉分叉，再切到横断面看血管和神经在鞘里怎么排。",
+ routes:[
+ R("ica","颈总 → 颈内动脉","artery","carotid","第 45、52 页","颈内动脉在颈段向颅底走，供血分支在更上方。",[
+ S("颈总动脉从下方上来","在胸锁乳突肌深面向颅侧上行，位置在颈内静脉内侧。","M213 333 Q207 272 210 204"),
+ S("在甲状软骨上缘附近分叉","一支是颈内动脉，起初位于颈外动脉的后外方，然后到它的后方。","M210 204 Q188 174 172 142"),
+ S("继续向颅底上行","颈内动脉在颈段通常没有分支。","M172 142 Q162 105 163 73")]),
+ R("eca","颈外动脉及分支","artery","carotid","第 45、59 页","沿途分支供给甲状腺、舌、面部和部分头颈结构。",[
+ S("由颈总动脉分出","从分叉处向上，起始段位于颈内动脉前内侧。","M210 204 Q227 174 227 136 T220 78"),
+ S("前面三支，由低到高","甲状腺上动脉朝前下走，舌动脉朝口底前行，面动脉走向下颌下三角并进入面部。","M220 187 Q258 191 268 230","M226 161 Q267 159 291 145","M226 138 Q273 129 286 103"),
+ S("还可向后或向内分支","枕动脉往后上，耳后动脉往耳后，咽升动脉在内侧上行。","M225 130 Q184 127 141 108","M223 102 Q209 89 202 65","M221 177 Q208 150 207 111")]),
+ R("ijv","颈内静脉","vein","carotid","第 45、52、57 页","把头、颈深部的血带到头臂静脉。",[
+ S("从颅底向下","在胸锁乳突肌前缘深面，沿着颈动脉鞘向下。","M151 71 Q144 153 156 223"),
+ S("沿途收支","面静脉、舌静脉、甲状腺上静脉和中静脉等可汇入。","M282 133 Q247 161 150 167","M263 209 Q214 228 156 223"),
+ S("在颈根部形成静脉角","与锁骨下静脉汇合成头臂静脉。","M156 223 Q153 289 156 322 Q163 336 181 345","M113 321 Q134 323 156 322")]),
+ R("vagus","迷走神经","nerve","carotid","第 46、52–55 页","从颅底下行到颈、胸等处，沿途有去喉和心脏等处的分支。",[
+ S("在鞘内向下","从颅底下来，通常位于动脉和颈内静脉之间的后方。切换横断面看清这个「后」。","M158 78 Q158 152 176 200"),
+ S("颈部发出分支","上方发出喉上神经，颈心支可沿颈总动脉表面向下。","M165 150 Q215 155 257 171","M176 200 Q195 217 198 260"),
+ S("主干继续进入胸腔","左右在颈根部、胸腔的关系不同，另在甲状腺章节追踪喉返神经。","M176 200 Q179 260 180 333")]),
+ R("hypoc","舌下神经","nerve","carotid","第 45–46、59 页","穿过颈动脉三角，去舌控制运动。",[
+ S("二腹肌后腹深面进入","从上方斜下来，来到颈内、外动脉附近。","M139 102 Q153 130 167 153"),
+ S("弓形跨过两条动脉的浅面","向前横过颈内动脉、颈外动脉，从二腹肌后腹深面接入下颌下三角。","M167 153 Q193 171 231 158 Q259 143 285 122")]),
+ R("ansa","颈袢","nerve","carotid","第 45、52、59 页 · 图 2-18","发出肌支，控制肩胛舌骨肌、胸骨舌骨肌和胸骨甲状肌。",[
+ S("上根先搭舌下神经一程","第 1 颈神经的纤维先随舌下神经走，到颈动脉三角再离开，沿动脉浅面下行。","M168 153 Q183 166 199 164 Q211 192 214 240"),
+ S("下根从第 2、3 颈神经来","通常沿颈内静脉附近下行，可走静脉浅面或深面。","M132 156 Q138 206 156 245 Q174 270 194 268"),
+ S("在鞘表面会合成环","大致在环状软骨、肩胛舌骨肌中间腱附近会合，分出肌支。","M214 240 Q211 273 194 268","M201 270 Q217 290 239 294","M205 273 Q230 282 254 275")]),
+ R("sympathetic","颈交感干","nerve","carotid","第 52–53、55 页","是交感神经的一条纵向通路，颈部各节还可发出颈心支。",[
+ S("贴近颈椎的前外侧","位于颈动脉鞘后方附近，被椎前筋膜覆盖。","M124 79 Q121 128 122 168"),
+ S("沿脊柱旁向下","颈上、颈中、颈下神经节由节间支相连，颈下节常与第 1 胸神经节融合。","M122 168 Q121 247 126 319")])
+ ],
+ notes:[
+ ["如何找到颈动脉三角","沿胸锁乳突肌上段前缘，再找二腹肌后腹与肩胛舌骨肌上腹，三条边围成这个区域。甲状软骨上缘是找颈总动脉分叉的常用地标。"],
+ ["鞘内、鞘表面、鞘后方","鞘内下段是颈总动脉，上段是颈内动脉；颈内静脉和迷走神经贯穿。颈袢多贴鞘前方，颈交感干在鞘后方附近。图中横断面分别画出上、下段的典型位置。"],
+ ["颈动脉窦和小球","窦是分叉附近的膨大部，感受压力。小球在分叉后方附近，是感受血液化学变化的小体。"]
+ ],
+ quiz:[Q("哪条动脉在颈段通常没有分支？",["颈外动脉","颈内动脉","甲状腺上动脉"],1,"颈内动脉在颈段一路上行。甲状腺上、舌、面动脉等来自颈外动脉。","ica",2),
+ Q("颈动脉与颈内静脉之间的后方通常是哪条神经？",["迷走神经","舌下神经","颈横神经"],0,"迷走神经随颈动脉与颈内静脉同走在鞘内。","vagus",0)]
+},
+{
+ id:"thyroid",name:"甲状腺与喉",source:"第 46–52 页 · 图 2-12 至 2-17",views:["recurrent","larynx","thyroid","crossing","organs"],
+ intro:"从喉和气管出发，分开看去喉的神经、进甲状腺的动脉，以及从腺体流出的静脉。",
+ routes:[
+ R("rln","左右喉返神经","nerve","recurrent","第 48–50、55 页 · 图 2-14、2-15","负责声门裂以下的喉黏膜感觉，控制除环甲肌外的喉内肌。",[
+ S("同源：左右都从迷走神经分出","迷走神经先从颈部往下。正面观中，屏幕左边是人体右边。","M104 92 Q104 157 109 207","M370 92 Q370 190 370 271"),
+ S("分开：右边绕右锁骨下动脉，左边绕主动脉弓","两条分支都从所绕动脉的下方向后钩绕。左侧一路进到胸腔，所以走得更长。","M109 207 C105 227 124 241 145 232 Q155 227 164 215","M370 271 C369 306 344 331 323 319 Q306 309 303 287"),
+ S("返回：沿气管食管旁沟向上","两条贴着气管和食管邻接处的旁沟返回颈部，来到喉旁。","M164 215 Q181 189 185 158 L193 111","M303 287 Q293 241 293 191 L285 111"),
+ S("进喉：经过环甲关节后方","到咽下缩肌下缘附近，经环甲关节后方进入喉；入喉段也叫喉下神经。","M193 111 Q196 98 214 88","M285 111 Q282 98 265 88")]),
+ R("slni","喉上神经内支","nerve","larynx","第 48、51 页","负责声门裂以上的喉黏膜等处的感觉。",[
+ S("从迷走神经分出","喉上神经沿咽侧壁向下，到舌骨大角附近分内、外两支。","M137 72 Q148 111 188 132"),
+ S("穿甲状舌骨膜进喉","内支与喉上动脉一起穿膜，进入声带上方的喉腔区域。","M188 132 Q224 138 250 158 T302 158")]),
+ R("slne","喉上神经外支","nerve","larynx","第 48、51 页","支配环甲肌，帮助拉紧声带。教材也提到它可给咽下缩肌发支。",[
+ S("到舌骨大角附近分支","跟内支有同一个上游，都是从迷走神经分出的喉上神经。","M137 72 Q148 111 188 132"),
+ S("伴甲状腺上动脉向前下","到甲状腺上极附近，两条路线分开，神经转向内侧。","M188 132 Q177 174 204 214 Q228 239 251 221"),
+ S("到环甲肌","来到喉外面的环甲肌，调节声带张力。","M251 221 Q270 205 289 217")]),
+ R("sta","甲状腺上动脉","artery","thyroid","第 48–49 页 · 图 2-14","从上方给甲状腺供血，也发出喉上动脉。",[
+ S("从颈外动脉起步","近起始部向前下走，途中邻近喉上神经外支。","M121 88 Q149 111 167 154"),
+ S("从上极接入甲状腺","到上端附近分前、后支，分别沿侧叶前缘和后缘走。","M167 154 Q182 177 184 219","M167 154 Q162 192 169 225")]),
+ R("ita","甲状腺下动脉","artery","thyroid","第 48–50、52 页 · 图 2-14、2-15","从后方给甲状腺、甲状旁腺等邻近结构供血。",[
+ S("从锁骨下动脉的甲状颈干分出","向上沿前斜角肌内侧缘走。","M103 304 Q113 276 121 252 Q123 234 122 215"),
+ S("转向内侧，经过颈动脉鞘后方","约在第 6 颈椎水平转弯，往甲状腺后面走。","M122 215 Q151 205 176 210"),
+ S("靠侧叶下极进入腺体后面","途中靠近喉返神经。切换「交叉变异」查看可能的三种关系。","M176 210 Q183 231 198 236")]),
+ R("tv","甲状腺三组静脉","vein","thyroid","第 49–50 页 · 图 2-16","上、中两组多回颈内静脉，下组主要回头臂静脉。",[
+ S("甲状腺上静脉","从侧叶上部起，伴同名动脉走，流入颈内静脉。","M302 159 Q324 133 351 130"),
+ S("甲状腺中静脉","从侧叶中部短短地横向走，经颈总动脉前方，汇入颈内静脉。有时缺如。","M326 207 Q339 188 353 188"),
+ S("甲状腺下静脉","从下缘在气管前下行，两侧可连成静脉丛，主要汇入头臂静脉。","M196 239 Q204 265 221 276 L224 318","M304 239 Q290 268 276 276 L272 308","M221 276 Q249 264 276 276")]),
+ R("ima","甲状腺最下动脉","artery","thyroid","第 49–51 页","存在时，从下方给甲状腺峡供血。",[
+ S("可能从头臂干或主动脉弓发出","这是一条可能出现的变异血管。图示从头臂干起步的类型。","M159 326 Q195 326 233 301"),
+ S("沿气管前面上行","向上到甲状腺峡。与同在气管前方、往下回流的下静脉方向相反。","M233 301 Q241 268 240 222")])
+ ],
+ notes:[
+ ["先找到喉、气管和食管","喉在气管上方，气管在食管前方；咽在喉后方并向下续作食管。甲状腺像 H 形，两侧叶贴着气管前外侧，峡通常跨在第 2–4 气管软骨前。甲状旁腺通常位于甲状腺侧叶背面。"],
+ ["上、下两条动脉从哪来","甲状腺上动脉来自颈外动脉，接近甲状腺上极。甲状腺下动脉来自锁骨下动脉的甲状颈干，绕到侧叶后方。喉上动脉伴喉上神经内支穿膜；喉下动脉来自甲状腺下动脉。"],
+ ["内支、外支、返支怎么记","喉上内支进喉，管声门裂以上感觉。喉上外支去环甲肌。喉返神经从下方返回，管声门裂以下感觉和其余喉内肌运动。"],
+ ["肌三角和三组静脉","肌三角三边是颈前正中线、胸锁乳突肌前缘和肩胛舌骨肌上腹。浅处找舌骨下肌群，深处看喉、气管和甲状腺。甲状腺的上、中静脉回颈内静脉，下静脉主要回头臂静脉。"]
+ ],
+ quiz:[Q("左喉返神经在哪儿掉头回喉？",["左锁骨下静脉","右锁骨下动脉","主动脉弓下方"],2,"左支绕主动脉弓，右支绕右锁骨下动脉。两条都沿气管食管旁沟上行。","rln",1),
+ Q("哪一支伴喉上动脉穿甲状舌骨膜？",["喉上神经内支","喉上神经外支","舌下神经"],0,"喉上神经内支和喉上动脉一起穿膜进喉。","slni",1)]
+},
+{
+ id:"root",name:"颈根部与颈外侧区",source:"第 53–57 页 · 图 2-19 至 2-23",views:["scalene","lateral","rootvessels"],
+ intro:"先找前斜角肌和第 1 肋。每条路线都用相同的路标，比较它们从肌肉前面还是两块肌肉之间通过。",
+ routes:[
+ R("suba","锁骨下动脉","artery","scalene","第 53–57 页","从颈根部通向上肢，第 1 肋外侧缘以后称腋动脉。",[
+ S("第 1 段在前斜角肌内侧","左边从主动脉弓来，右边从头臂干来。主干先向外走向前斜角肌。","M82 300 Q110 248 176 234"),
+ S("第 2 段从前斜角肌后方过","夹在前、中斜角肌之间，与臂丛同路；臂丛位于动脉后上方。","M176 234 Q218 221 268 232"),
+ S("第 3 段在前斜角肌外侧","跨第 1 肋继续向腋窝。锁骨下静脉在前下，臂丛在后上。","M268 232 Q319 240 412 258")]),
+ R("subv","锁骨下静脉","vein","scalene","第 55、57 页","让上肢静脉血回流到头臂静脉。",[
+ S("在第 1 肋外侧缘接续腋静脉","从外往内回流，位置在锁骨下动脉的前下方。","M420 300 Q349 287 283 278"),
+ S("走前斜角肌前面","从锁骨和前斜角肌之间过去，经过膈神经前方。","M283 278 Q204 266 157 277"),
+ S("与颈内静脉汇合","在前斜角肌内侧汇成头臂静脉，汇合处形成静脉角。","M157 277 Q126 287 105 305 L82 326","M105 253 L105 305")]),
+ R("phrenic","膈神经","nerve","scalene","第 53–55、57 页 · 图 2-20","从颈部走到胸腔，支配膈肌，参与呼吸。",[
+ S("由 C3–C5 神经前支组成","高处从颈神经发出，朝前斜角肌靠拢。","M272 97 Q245 121 218 146"),
+ S("贴前斜角肌前面向内下","在椎前筋膜深面，沿肌肉的前面斜着往下走。","M218 146 Q199 198 175 242"),
+ S("从锁骨下动、静脉之间入胸","动脉从它后方经过，静脉从它前方经过。","M175 242 Q168 268 156 293 L145 331")]),
+ R("plexus","臂丛","nerve","scalene","第 55–57 页 · 图 2-23","把来自颈、胸神经的纤维延续到上肢。",[
+ S("从 C5–T1 神经前支来","五个根在颈部汇集，朝前、中斜角肌之间走。","M256 100 Q274 126 288 147","M272 101 Q282 126 299 146","M286 106 Q294 127 308 151","M300 113 Q308 134 319 153","M312 124 Q320 141 328 158"),
+ S("与锁骨下动脉穿同一处间隙","它在锁骨下动脉后上方，各根汇成三干。","M288 147 Q303 171 330 184","M299 146 Q314 178 342 190","M319 153 Q330 178 353 198"),
+ S("从锁骨上三角续向腋窝","往外走，三个干继续分股，后续走入腋区。","M330 184 Q360 191 412 214","M342 190 Q378 207 413 229","M353 198 Q379 218 412 240")]),
+ R("accessory","副神经","nerve","lateral","第 45–46、56 页 · 图 2-22","控制胸锁乳突肌和斜方肌，帮助转头、耸肩。",[
+ S("从颈静脉孔出颅","经二腹肌后腹深面，向胸锁乳突肌上部前缘靠近。","M235 89 Q247 117 237 144"),
+ S("穿入胸锁乳突肌，随后从后缘出来","从肌后缘上、中三分之一交界附近进入枕三角。","M237 144 Q213 163 188 171"),
+ S("在枕三角向外下斜走","沿肩胛提肌表面，走到斜方肌前缘，进入肌深面。","M188 171 Q154 197 124 227 T88 253")]),
+ R("vertebral","椎动脉","artery","rootvessels","第 53、55 页 · 图 2-21","将血送到脑的后部等区域。",[
+ S("发自锁骨下动脉第 1 段","沿前斜角肌内侧、胸膜顶前方上行。","M128 292 Q158 265 174 231"),
+ S("沿颈椎横突孔向上","常由 C6 横突孔进入，继续向上经过上位颈椎横突孔。","M174 231 Q177 179 177 124"),
+ S("经过枕骨大孔入颅","离开上位颈椎后转向颅底，与对侧路线一起供血。","M177 124 Q167 99 200 78")])
+ ],
+ notes:[
+ ["看三条线在肌肉哪一面","锁骨下静脉在前斜角肌前方。膈神经也走这块肌肉前面，但位置通常比静脉深。前、中斜角肌和第 1 肋围出的间隙，给锁骨下动脉和臂丛通过。"],
+ ["枕三角与锁骨上三角","整个颈外侧区由胸锁乳突肌后缘、斜方肌前缘和锁骨围成，肩胛舌骨肌下腹把它分成上方枕三角、下方锁骨上三角。副神经走枕三角；臂丛和锁骨下动脉第 3 段见于锁骨上三角。"],
+ ["从第 1 段认分支","椎动脉向上入颅，胸廓内动脉向下去胸壁，甲状颈干分支去甲状腺和肩胛区等。肋颈干可起于第 1 或第 2 段。"],
+ ["颈根部还有胸膜顶和椎动脉三角","肺尖外的胸膜顶可高出锁骨内侧段。椎动脉三角的三边是颈长肌、前斜角肌和锁骨下动脉第 1 段，附近还能看见甲状颈干与颈交感干下部。"]
+ ],
+ quiz:[Q("哪两条结构穿过斜角肌间隙？",["锁骨下动脉与臂丛","锁骨下静脉与膈神经","副神经与锁骨下静脉"],0,"动脉和臂丛同在前、中斜角肌之间；静脉经过前斜角肌前面。","suba",1),
+ Q("膈神经沿前斜角肌下行后，从哪里进胸？",["穿过锁骨下静脉管腔","穿过锁骨下动脉后方与第 1 肋之间","穿过锁骨下动脉与静脉之间"],2,"膈神经在动脉前面、静脉后面进入胸腔。","phrenic",2)]
+},
+{
+ id:"lymph",name:"淋巴与标本复习",source:"第 41–44、51–53、57–59 页 · 图 2-5、2-19、2-23",views:["lymph"],
+ intro:"淋巴结像沿途的汇集站。先找各组在哪里，再沿着颈内静脉旁的深淋巴链往下追。",
+ routes:[
+ R("lymneck","颈部淋巴结链","lymph","lymph","第 41–44、52、57–58 页","把颈部不同区域的淋巴收拢到颈深淋巴结，再汇成颈干。",[
+ S("从各区汇过来","颏下与下颌下接收下巴、口底等处，耳后和颈外侧浅淋巴通向深组；喉、气管和甲状腺周围也有颈前深组。","M211 119 Q186 142 162 164","M126 110 Q137 146 162 164","M234 205 Q212 207 175 221","M272 119 Q299 139 318 165","M350 111 Q341 143 318 165","M248 204 Q278 207 305 221"),
+ S("沿颈内静脉旁向下","深淋巴结沿颈内静脉排列，肩胛舌骨肌交叉附近可用来分上、下组。","M162 164 Q166 211 169 259","M318 165 Q314 208 312 259"),
+ S("汇成颈干到颈根部","左右各有颈干，把淋巴导向同侧静脉角附近。","M169 259 Q175 289 162 314","M312 259 Q306 289 318 314")]),
+ R("leftduct","左胸导管","lymph","lymph","第 53–54、57–58 页","把胸导管收集的淋巴引入左侧静脉系统。",[
+ S("沿食管左侧来到颈根部","从胸腔上口进入颈部，约在第 7 颈椎高度向外弯成弓。","M283 351 Q283 315 285 292 Q300 265 317 289"),
+ S("汇入左静脉角附近","通常入左颈内静脉与左锁骨下静脉汇合处，也有入其中一条静脉的变异。","M317 289 Q328 299 318 314")]),
+ R("rightduct","右淋巴导管与变异","lymph","lymph","第 53、57–58 页","把右侧头颈、右上肢和右部分胸区的淋巴送入右侧静脉系统。",[
+ S("右侧几股淋巴干在颈根部汇集","右颈干、右锁骨下干和右支气管纵隔干可汇成一小段右淋巴导管。","M173 273 Q169 287 157 297","M127 294 Q144 290 157 297","M153 320 Q151 308 157 297"),
+ S("在右静脉角附近进入静脉","右淋巴导管可能缺如，各淋巴干也可分别汇入附近静脉。","M157 297 Q164 304 162 314")])
+ ],
+ notes:[
+ ["找颈内静脉旁的两个路标","二腹肌后腹附近可找颈内静脉二腹肌淋巴结。肩胛舌骨肌中间腱附近可找颈内静脉肩胛舌骨肌淋巴结。"],
+ ["标本复习第一轮","先指认下颌骨、乳突、舌骨、喉结、颈静脉切迹和锁骨。沿胸锁乳突肌表面认颈外静脉，沿肌后缘认颈丛皮支。"],
+ ["标本复习第二轮","在颈动脉三角找颈总动脉分叉、舌下神经和迷走神经；在甲状腺上下极找相邻动脉与神经；回到锁骨上方，以前斜角肌辨认锁骨下静脉、动脉、膈神经和臂丛。"]
+ ],
+ quiz:[Q("左静脉角由哪两条静脉汇成？",["颈外静脉与颈内静脉","颈内静脉与锁骨下静脉","锁骨下静脉与颈前静脉"],1,"左颈内静脉和左锁骨下静脉汇合成左头臂静脉，这个汇合处常接收胸导管。","leftduct",1),
+ Q("颈外侧深淋巴结主要沿哪条血管排布？",["颈内静脉","颈外静脉","锁骨下动脉"],0,"颈外侧深淋巴结顺着颈内静脉从颅底向下延伸。","lymneck",1)]
+}
+];
+
+const colors = {artery:"#ad3e38",vein:"#31678e",nerve:"#8a580b",lymph:"#367352",base:"#52625c"};
+const NS = "http://www.w3.org/2000/svg";
+const path = (d, fill, stroke="#7d8578", w=1.4, extra="") => `<path d="${d}" fill="${fill}" stroke="${stroke}" stroke-width="${w}" stroke-linejoin="round" stroke-linecap="round" ${extra}/>`;
+const line = (d, stroke="#7d8578", w=1.4, extra="") => path(d,"none",stroke,w,extra);
+const ellipse = (x,y,rx,ry,fill,stroke="#7d8578",w=1.3) => `<ellipse cx="${x}" cy="${y}" rx="${rx}" ry="${ry}" fill="${fill}" stroke="${stroke}" stroke-width="${w}"/>`;
+const circle = (x,y,r,fill,stroke="#7d8578",w=1.3) => ellipse(x,y,r,r,fill,stroke,w);
+const rect = (x,y,w,h,fill,stroke="#7d8578",r=8) => `<rect x="${x}" y="${y}" width="${w}" height="${h}" rx="${r}" fill="${fill}" stroke="${stroke}"/>`;
+const word = (x,y,t, anchor="middle", size=12, extra="") => `<g class="label"><text x="${x}" y="${y}" text-anchor="${anchor}" style="font-size:${size}px" ${extra}>${t}</text></g>`;
+const tag = (x,y,t,tx,ty,anchor=x<tx?"start":"end") => `<g class="label"><line x1="${x}" y1="${y+5}" x2="${tx}" y2="${ty}"/><circle cx="${tx}" cy="${ty}" r="2"/><text x="${x}" y="${y}" text-anchor="${anchor}">${t}</text></g>`;
+const tags = (...args) => args.map(a=>tag(...a)).join("");
+const zone = (x,y,w,t,id) => `<g class="region" role="button" tabindex="0" data-chapter="${id}" aria-label="${t}"><rect x="${x}" y="${y}" width="${w}" height="33" rx="8"/><text x="${x+w/2}" y="${y+21}" text-anchor="middle">${t}</text></g>`;
+const tint={skin:"#e7dfcd",bone:"#e8dfc0",muscle:"#caa99c",pale:"#e4d4c7",cart:"#c4d3bf",air:"#d7dfcf",thy:"#d5a59b",deep:"#cfc8bf",av:"#d48e85",vv:"#92adc3",nn:"#d6ba6c",ll:"#99bca0"};
+const pair = (right,left) => right+`<g transform="translate(480 0) scale(-1 1)">${left??right}</g>`;
+const guide = (type,d,w=8) => line(d,{artery:tint.av,vein:tint.vv,nerve:tint.nn,lymph:tint.ll}[type],w);
+const side = () => path("M92 324 Q115 302 146 285 Q155 266 150 249 L123 144 Q103 118 106 74 Q117 31 172 25 Q221 20 244 44 Q263 62 269 89 L299 111 Q305 117 298 123 L277 127 L280 145 Q279 164 252 171 Q243 177 256 205 L279 275 Q288 303 363 323 L415 346 L415 365 L70 365Z",tint.skin);
+const front = () => path("M180 40 Q240 16 300 40 L300 97 Q297 122 295 155 Q295 202 318 241 Q335 267 394 292 Q419 303 428 341 L52 341 Q59 306 85 293 Q147 265 161 241 Q185 200 185 157 Q184 122 180 97Z",tint.skin);
+const jawline = () => path("M180 55 Q204 86 240 94 Q276 86 300 55 L295 99 Q274 121 240 125 Q206 121 185 99Z",tint.bone);
+const collar = () => pair(line("M85 319 Q142 292 185 303 L225 320","#a49066",8));
+const hyoid = () => line("M211 149 Q236 165 269 149","#a49066",7);
+const scm = () => pair(path("M181 92 Q169 129 168 154 Q172 211 126 273 L159 309 Q205 241 217 173 Q218 149 193 104Z",tint.muscle,"#a07e73"));
+const trachea = (x=240,y=188,depth=123) => {
+ const rings = Array.from({length:Math.floor(depth/13)-1},(_,i)=>line(`M${x-19} ${y+15+13*i} Q${x} ${y+21+13*i} ${x+19} ${y+15+13*i}`,"#94a690",1.6)).join("");
+ return rect(x-22,y,44,depth,tint.air,"#8fa28d",10)+rings;
+};
+const larynx = (x=240,y=170) => path(`M${x-31} ${y-13} Q${x} ${y-4} ${x+31} ${y-13} L${x+20} ${y+20} Q${x} ${y+27} ${x-20} ${y+20}Z`,tint.cart);
+const thyroid = () => pair(path("M203 210 Q198 194 193 157 Q183 141 168 159 Q147 185 158 225 Q166 249 183 245 Q196 240 201 226 L240 228 L240 211Z",tint.thy,"#a5746f"));
+const sideSCM = (opacity=1) => path("M156 100 Q181 106 191 129 Q202 188 218 231 Q238 275 273 315 L236 340 Q199 310 173 252 Q148 201 142 131Z",tint.muscle,"#a07e73",1.3,`opacity="${opacity}"`);
+const lateralJaw = () => path("M147 99 Q182 119 240 119 L303 101 L307 117 Q268 150 214 153 Q185 155 158 142Z",tint.bone);
+const view = (name, title, orientation, caption, art) => ({name,title,orientation,caption,art});
+const figures = {
+ overview:view("总览","先认颈部的五个地标","正面观 · 屏幕左为人体右","点图上的区域或章节按钮，打开对应的路线。",()=>
+  front()+scm()+trachea()+larynx()+jawline()+hyoid()+collar()+
+  tags([37,64,"下颌骨",197,90],[348,128,"舌骨",259,153],[22,217,"胸锁乳突肌",173,215],[363,250,"气管",252,243],[376,347,"锁骨",340,306])+
+  zone(16,144,105,"浅层与筋膜","layers")+zone(294,71,106,"下巴下面","jaw")+
+  zone(16,255,113,"颈动脉与颈动脉鞘","carotid")+zone(315,180,103,"甲状腺与喉","thyroid")+
+  zone(17,314,104,"颈根部","root")+zone(347,292,112,"淋巴与标本","lymph")),
+ surface:view("浅层侧面","浅静脉与皮神经","右侧面观 · 屏幕左为后，右为前","以胸锁乳突肌为斜线地标。靠近皮肤叫浅，往身体内部叫深。",()=>
+  side()+sideSCM()+lateralJaw()+ellipse(171,95,13,20,tint.pale)+line("M87 326 Q146 310 181 319 L255 339","#9d906f",7)+
+  line("M315 164 L319 292","#9d906f",1.5,'stroke-dasharray="4 5"')+
+  tags([42,243,"胸锁乳突肌",201,250],[36,177,"肌后缘中点附近",169,215],[82,348,"锁骨",147,317],[363,209,"颈前正中",319,216],[350,65,"下颌骨",260,129])),
+ fascia:view("筋膜横切","颈深筋膜与间隙","横断示意 · 上为前，下为后 · 屏幕左为人体右","这是层次示意。不同筋膜间隙分布于不同高度，不能在同一切面同时找到全部间隙。",()=>
+  ellipse(240,196,138,136,tint.skin)+ellipse(240,196,128,126,"#e8e2d5","#819184",3)+
+  ellipse(142,168,23,39,tint.muscle)+ellipse(338,168,23,39,tint.muscle)+
+  rect(188,117,104,123,"#d9dfc5","#748b70",36)+ellipse(240,159,28,23,tint.air)+ellipse(240,210,25,12,"#b8a2a0")+
+  path("M153 249 Q240 222 327 249 Q310 286 240 310 Q170 286 153 249Z","#d6c5bc","#8d7d87",2)+
+  line("M155 246 Q240 223 325 246","#796c80",2.5)+ellipse(240,282,34,24,tint.bone)+
+  pair(ellipse(171,204,21,23,"#e8ddc3","#877c6d")+circle(179,200,7,tint.av)+circle(163,201,8,tint.vv)+circle(171,214,4,tint.nn))+
+  path("M211 128 Q239 119 271 132 L268 147 Q240 130 213 147Z","#c2d0a4","none")+
+  path("M191 242 L194 227 Q240 243 286 226 L289 242 Q240 229 191 242Z","#d9be91","none")+
+  tags([24,76,"封套筋膜",130,109],[21,154,"颈动脉鞘",156,192],[30,277,"椎前筋膜",174,243],[40,329,"颈椎",232,286],[373,100,"脏器筋膜",288,139],[359,151,"气管",260,156],[360,219,"食管",264,210],[366,287,"颈深肌",277,257])),
+ spaces:view("间隙侧剖","从前往后看筋膜之间的空隙","人体右侧正中矢状示意 · 屏幕左为前，右为后","沿用教材的分层和间隙名称。浅绿为气管前间隙，浅棕为咽后间隙，淡紫为椎前间隙。",()=>
+  path("M130 81 Q240 48 326 77 Q354 100 347 166 L347 309 L100 309 Q105 239 112 170 Q97 117 130 81Z",tint.skin)+
+  path("M158 140 Q176 149 179 173 L172 255 L148 255 L151 180Z","#c2d0a4","none")+
+  path("M219 99 Q231 156 225 202 Q221 237 229 272 L246 275 Q237 230 241 196 Q247 140 236 96Z","#d9be91","none")+
+  path("M249 100 L272 105 Q279 145 268 199 Q265 239 270 275 L249 275 Q241 228 246 194 Q250 146 249 100Z","#cfbdcd","none")+
+  path("M191 104 L216 95 Q229 141 220 183 Q211 225 220 276 L200 275 Q193 231 198 187 Q201 145 191 104Z","#bfa7a0")+
+  trachea(192,167,116)+larynx(192,151)+
+  Array.from({length:7},(_,i)=>rect(273,98+i*25,38,19,tint.bone)).join("")+
+  line("M238 94 Q252 139 245 193 Q240 231 249 274","#796c80",2.5)+
+  path("M120 245 Q133 254 158 251 L146 285 L117 280Z","#e4d6a7","#a79263")+
+  rect(101,283,52,24,tint.bone)+
+  tags([20,145,"气管前间隙",166,191],[26,251,"胸骨上间隙",135,266],[39,322,"胸骨柄",120,291],[405,92,"咽后间隙",232,123],[441,179,"椎前间隙",256,180],[413,235,"椎前筋膜",243,218],[433,317,"颈椎",288,253])+
+  word(196,318,"气管")+word(211,119,"咽")),
+ jaw:view("下颌下侧面","下颌下三角与口底","右侧面观 · 屏幕左为后，右为前","舌骨舌肌后缘是判断舌动脉深浅的路标。线条碰到一起时，读路线步骤里的深浅说明。",()=>
+  side()+path("M129 123 Q201 103 291 116 Q345 108 371 135 Q358 178 322 186 L245 196 L176 173Z",tint.pale)+lateralJaw()+
+  path("M182 194 Q249 178 311 192 L328 227 Q254 258 188 249Z",tint.muscle)+
+  path("M179 170 Q217 165 241 182 Q250 194 226 209 Q207 236 182 218 Q172 205 179 170Z","#d5bd90")+
+  line("M136 171 Q166 224 208 280 Q245 244 283 171","#ac8a7b",9)+
+  line("M190 280 Q211 286 230 280","#a49066",6)+guide("artery","M141 303 L141 265",7)+
+  tags([71,75,"下颌骨",189,129],[378,116,"咬肌前缘附近",290,142],[367,92,"舌",326,125],[398,196,"舌下阜",351,163],[29,190,"下颌下腺",187,193],[369,256,"舌骨舌肌",273,231],[56,261,"二腹肌后腹",174,237],[306,313,"舌骨",219,282])),
+ carotid:view("侧面路线","颈动脉三角","右侧面观 · 屏幕左为后，右为前","重点看甲状软骨上缘附近的分叉。鞘内三个结构的相对深浅可切换横断面查看。",()=>
+  side()+sideSCM(.42)+lateralJaw()+path("M149 131 L277 145 L231 242Z","#f1e6cf","#9c8b70",1.2,'stroke-dasharray="5 4"')+
+  line("M145 126 Q174 149 233 164 L274 140","#96786c",7)+line("M232 241 L278 186","#96786c",6)+
+  path("M274 178 L298 192 L290 221 L271 214Z",tint.cart)+
+  guide("artery","M214 336 Q208 250 210 204 Q188 170 166 133 L161 72",8)+guide("artery","M210 204 Q237 159 220 77",7)+
+  guide("vein","M151 75 Q144 171 156 222 L154 322",9)+
+  tags([33,95,"二腹肌后腹",194,149],[352,206,"甲状软骨",289,196],[31,276,"胸锁乳突肌",191,266],[360,253,"肩胛舌骨肌上腹",254,213],[326,302,"颈总动脉",213,300])),
+ sheath:view("颈动脉鞘横切","鞘内三条线分别在哪","人体右侧局部横断 · 上为前 · 由足侧向头侧观察","图左侧是外侧，图右侧是内侧。上段和下段的血管前后位置略有不同。",()=>
+  word(130,50,"颈动脉鞘上段")+word(350,50,"颈动脉鞘下段")+
+  rect(31,67,198,239,"#ede7d9","#b4ae9e",15)+rect(251,67,198,239,"#ede7d9","#b4ae9e",15)+
+  [0,220].map((dx,i)=>`<g transform="translate(${dx} 0)">`+
+   ellipse(130,181,72,78,"#f8f1de","#9a9276",2)+
+   circle(103,i?164:184,25,tint.vv,"#3b6d92",2)+circle(157,i?179:154,20,tint.av,"#a5443c",2)+
+   circle(132,214,9,tint.nn,"#8a580b",2)+circle(171,271,7,tint.nn,"#8a580b",2)+
+   line("M98 110 Q123 93 160 111","#8a580b",3,'stroke-dasharray="5 4"')+
+   tags([46,127,"颈内静脉",93,i?152:170],[216,126,i?"颈总动脉":"颈内动脉",161,i?163:143],[53,245,"迷走神经",132,214],[215,294,"颈交感干",171,271])+
+   word(124,88,"颈袢在鞘前方")+word(60,329,"外侧")+word(197,329,"内侧")+"</g>").join("")+
+  word(240,365,"两图上方为前，下方为后")),
+ recurrent:view("左右喉返神经","同一来路，两处转弯","正面观 · 屏幕左为人体右，右为人体左","两条金色路线可并排追踪。血管与喉、气管是定位地标。",()=>
+  path("M67 87 Q150 48 207 63 Q240 41 273 63 Q330 48 414 87 L433 343 Q240 362 47 343Z",tint.skin)+
+  rect(217,102,46,216,"#c5aea8","#ae9891",12)+trachea(240,106,205)+larynx(240,91)+
+  guide("artery","M239 337 C248 291 269 274 301 270 Q333 263 370 272 Q394 281 402 306",15)+
+  guide("artery","M237 335 Q226 281 199 237 Q171 213 137 216 Q106 216 76 222",12)+
+  guide("artery","M199 236 Q188 188 187 132",9)+
+  line("M193 109 Q190 163 163 216","#b2a798",1.3,'stroke-dasharray="4 5"')+
+  line("M286 109 Q299 216 304 286","#b2a798",1.3,'stroke-dasharray="4 5"')+
+  word(112,42,"人体右侧","middle",15)+word(368,42,"人体左侧","middle",15)+
+  tags([31,82,"右迷走神经",104,102],[450,82,"左迷走神经",370,102],[29,253,"右锁骨下动脉",132,216],[442,317,"主动脉弓",354,271],[241,59,"喉",243,87],[251,356,"气管在前、食管在后",246,298])),
+ larynx:view("喉上神经","一个分叉，两种走向","右侧局部侧面示意 · 屏幕左为后，右为前","内支和喉上动脉穿膜进喉；外支先伴甲状腺上动脉，再转向环甲肌。",()=>
+  path("M119 107 Q172 65 231 68 Q327 60 358 109 L364 308 L116 308Z",tint.skin)+
+  trachea(277,221,105)+path("M236 143 L305 137 L320 188 L291 220 L250 209Z",tint.cart)+
+  path("M232 125 L301 122 L310 148 L237 155Z","#dce2cf","#809681",1,'stroke-dasharray="3 3"')+
+  line("M222 117 Q263 103 306 116","#a49066",6)+
+  path("M255 218 Q273 197 294 214 L287 232 L262 235Z",tint.muscle)+
+  path("M191 241 Q216 220 229 249 Q237 270 215 289 Q190 297 184 274Z",tint.thy)+
+  guide("artery","M155 103 Q176 141 175 165 Q177 218 208 248",7)+guide("artery","M176 166 Q228 162 266 154 L302 151",4)+
+  line("M270 175 L306 175","#6f726d",2,'stroke-dasharray="4 3"')+
+  tags([32,72,"迷走神经",137,81],[379,93,"舌骨",278,112],[411,131,"甲状舌骨膜",294,143],[410,183,"声门裂水平",300,175],[402,231,"环甲肌",277,218],[75,276,"甲状腺上极",205,239],[43,197,"甲状腺上动脉",181,192])),
+ thyroid:view("甲状腺血管","动脉怎么进，静脉怎么回","正面观 · 屏幕左为人体右","上、中静脉主要汇入颈内静脉；下静脉主要汇入头臂静脉。图中用两侧分别示范部分路线。",()=>
+  front()+trachea(240,123,186)+larynx(240,113)+thyroid()+
+  guide("artery","M159 326 Q136 278 122 217 L121 85",9)+guide("artery","M159 326 Q102 301 72 301",8)+
+  guide("vein","M351 104 Q355 152 352 198 L350 292 Q340 314 281 332 L176 332",11)+
+  guide("vein","M408 299 L349 292",9)+
+  tags([33,101,"颈外动脉",121,94],[28,271,"甲状颈干",118,254],[36,318,"锁骨下动脉",94,303],[431,115,"颈内静脉",352,121],[425,255,"甲状腺侧叶",309,222],[378,353,"头臂静脉",324,315],[241,368,"甲状腺峡",241,219])),
+ crossing:view("交叉变异","甲状腺下动脉与喉返神经","局部关系示意 · 图纸表面代表靠观察者的一侧","实线压在上层，短断线或虚线表示被遮挡。教材列举的左右侧常见情况都有变异。",()=>
+  [0,150,300].map((dx,i)=>`<g transform="translate(${dx} 0)">`+
+   rect(19,72,140,222,"#ece5d8","#ccc2b1",12)+word(89,101,["神经在动脉前方","神经在动脉后方","神经穿行分支之间"][i])+
+   (i===0 ? line("M37 182 Q63 186 79 182 M98 180 Q117 176 141 170",colors.artery,7)+line("M88 246 Q85 176 88 121",colors.nerve,5) :
+    i===1 ? line("M88 246 Q86 221 86 194 M86 167 Q86 145 88 121",colors.nerve,5)+line("M37 182 Q87 190 141 170",colors.artery,7) :
+     line("M37 181 Q60 181 79 164 M98 152 Q119 143 141 134",colors.artery,7)+line("M88 246 Q85 174 88 121",colors.nerve,5)+line("M58 181 Q89 210 141 209",colors.artery,7))+
+   word(89,275,["右侧可见","左侧较常见","右侧可见"][i])+"</g>").join("")),
+ organs:view("器官位置","喉、气管、食管与甲状腺","左图正面观，屏幕左为人体右 · 右图是人体右侧剖面，左前右后","正面图看甲状腺包在气管前外侧。侧剖面看咽接食管、喉接气管，以及甲状旁腺所在的一侧。",()=>
+  rect(17,64,213,268,"#eee7d8","#d1cabb",18)+rect(249,64,213,268,"#eee7d8","#d1cabb",18)+
+  `<g transform="translate(-50 18) scale(.72)">${trachea(240,140,238)+larynx(240,129)+thyroid()}</g>`+
+  path("M376 92 Q412 103 414 145 Q405 183 392 219 L393 303 L376 303 L372 211 Q387 157 376 92Z","#c4ada8")+
+  trachea(325,175,126)+larynx(325,157)+
+  path("M324 182 Q338 176 349 196 L354 241 Q326 259 317 227Z",tint.thy)+
+  ellipse(354,207,6,9,"#d9be68")+ellipse(356,234,6,9,"#d9be68")+
+  tags([41,98,"喉",121,107],[191,198,"甲状腺峡",125,175],[44,237,"甲状腺侧叶",80,174],[191,269,"气管",124,265],[447,94,"咽",399,127],[450,278,"食管",385,272],[440,196,"甲状旁腺",355,208],[290,303,"气管",324,280])),
+ scalene:view("前斜角肌","前斜角肌前面，还是两肌之间","人体右侧颈根部局部 · 屏幕左为内侧，右为外侧","锁骨透明化。前斜角肌后经过的动脉段用虚线。膈神经经过锁骨下静脉后方的一小段也用虚线。",()=>
+  path("M63 266 Q130 214 234 242 Q302 241 429 275 L432 306 Q322 269 223 277 Q118 277 68 312Z",tint.bone)+
+  path("M310 68 Q352 75 360 103 L344 163 L320 248 L276 245 Q300 178 310 68Z","#b58c84")+
+  path("M228 74 Q252 79 255 100 Q238 162 229 205 L201 256 L156 258 Q202 184 228 74Z",tint.muscle)+
+  path("M130 154 Q152 117 185 143 Q196 160 194 185 L164 239 L122 238Z","#c9d4c9","#9bada0",1.1,'opacity=".7"')+
+  guide("artery","M84 300 Q114 249 176 234",8)+line("M176 234 Q220 221 267 232",tint.av,6,'stroke-dasharray="4 5"')+
+  guide("artery","M268 232 Q319 240 412 258",8)+guide("vein","M419 300 Q319 282 245 273 Q177 265 105 305",9)+
+  line("M67 303 Q167 295 223 308 T421 322","#b7aa8d",7,'opacity=".48"')+
+  tags([23,182,"前斜角肌",202,184],[436,89,"中斜角肌",329,102],[415,145,"斜角肌间隙",271,173],[435,348,"锁骨",378,316],[36,347,"第 1 肋",130,274],[25,112,"胸膜顶",143,152])),
+ lateral:view("枕三角侧面","副神经怎样去斜方肌","人体右侧面观 · 屏幕左为后，右为前","肩胛舌骨肌下腹把颈外侧区分成上方枕三角和下方锁骨上三角。",()=>
+  `<g transform="translate(49 0)">${side()+sideSCM(.9)+lateralJaw()}</g>`+
+  path("M149 92 Q123 144 123 181 Q102 231 65 267 L51 328 Q108 315 139 295 Q150 231 168 194Z","#be9b91")+
+  path("M166 151 L228 279 L135 281 L122 231Z","#f0e4c7","#a28c64",1,'opacity=".72" stroke-dasharray="5 4"')+
+  line("M113 263 Q164 261 229 286","#a68d7c",7)+line("M84 323 Q167 297 245 315","#a49066",7)+
+  tags([32,206,"斜方肌",118,216],[370,171,"胸锁乳突肌",235,188],[41,133,"枕三角",161,193],[35,288,"肩胛舌骨肌下腹",148,265],[363,313,"锁骨上三角",185,294])),
+ rootvessels:view("椎动脉","从锁骨下动脉沿颈椎入颅","人体右侧局部 · 屏幕左为外侧，右为内侧","椎动脉通常从 C6 的横突孔进入。颈长肌和前斜角肌在图中为椎动脉三角的参照。",()=>
+  Array.from({length:6},(_,i)=>rect(162,119+i*22,103,17,tint.bone)+circle(177,127+i*22,5,"#eee9df")).join("")+
+  path("M137 72 Q197 53 258 72 L248 97 Q202 86 151 98Z",tint.bone)+
+  path("M113 146 L143 130 Q167 185 143 252 L111 277 L91 250 Q118 198 113 146Z",tint.muscle)+
+  path("M230 143 L257 122 L256 239 L237 268 L221 242Z",tint.muscle)+
+  path("M139 268 L179 231 L235 268Z","#e5e4ca","#a29671",1,'stroke-dasharray="4 4"')+
+  guide("artery","M72 297 Q100 301 128 292 Q185 269 253 272 L340 302",9)+
+  tags([31,89,"枕骨大孔",202,78],[318,127,"上位颈椎横突孔",177,129],[359,228,"C6 横突孔",177,233],[341,197,"颈长肌",245,199],[36,177,"前斜角肌",125,185],[380,323,"锁骨下动脉第 1 段",202,272])),
+ lymph:view("淋巴正面","从颈部淋巴链到静脉角","正面观 · 屏幕左为人体右","圆点表示淋巴结组。两侧靛蓝线汇合的地方是静脉角。",()=>
+  front()+scm()+jawline()+trachea(240,166,140)+collar()+
+  pair(guide("vein","M154 127 Q159 213 162 314 Q180 334 219 342",9)+guide("vein","M79 310 Q110 300 162 314",9))+
+  [[126,110],[211,119],[272,119],[350,111],[162,164],[163,185],[166,204],[175,221],[167,242],[169,259],[318,165],[316,186],[315,204],[305,221],[313,244],[312,259],[234,205],[248,204]].map(([x,y])=>circle(x,y,5,tint.ll,"#527b5c")).join("")+
+  tags([41,105,"颈外侧浅组",126,110],[392,98,"颏下、下颌下组",272,119],[40,204,"颈深淋巴结",163,185],[448,221,"颈前深淋巴结",248,204],[46,351,"右静脉角",162,314],[430,352,"左静脉角",318,314]))
+};
+
+const $ = id => document.getElementById(id);
+const reduced = matchMedia("(prefers-reduced-motion: reduce)");
+const narrow = matchMedia("(max-width:660px)");
+const chapterById = Object.fromEntries(chapters.map(chapter => [chapter.id,chapter]));
+const overviewText = [
+ ["下颌骨","下巴和下脸的骨架。下颌骨下面可以找到下颌下三角。"],
+ ["舌骨","下巴下、喉上方的一块小骨。它把颈前区分成舌骨上区和舌骨下区。"],
+ ["胸锁乳突肌","从耳后斜向胸骨和锁骨。看它的表面、前缘和后缘，就能给很多神经血管定位。"],
+ ["气管","颈前中线深处的空气通道。食管在它后方，甲状腺在它前外侧。"],
+ ["锁骨","颈部和肩部交界的横向地标。锁骨附近是颈部、上肢和胸腔线路交会的地方。"]
+];
+const state = {chapter:null,view:"overview",route:null,step:0,playing:false,elapsed:0,raf:0,compare:null};
+const frameDuration = 3800;
+let traceFrame = [];
+const cssColor = type => `--tone:${colors[type]}`;
+const chip = (name, key, value, current) => `<button class="chip" data-${key}="${value}" aria-pressed="${value===current}">${name}</button>`;
+const note = ([title,body]) => `<div class="note"><h3>${title}</h3><p>${body}</p></div>`;
+const currentFigure = () => figures[state.view];
+const setStatus = text => { $("announce").textContent = text; };
+const moveToStudy = () => $("study").scrollIntoView({block:"start",behavior:reduced.matches?"auto":"smooth"});
+
+function moveRoutePicker() {
+ const routes = $("routes");
+ if (narrow.matches) $("stage").before(routes);
+ else $("route-info").before(routes);
+}
+
+function renderNavigation() {
+ $("lessons").innerHTML = chapters.map(chapter =>
+  `<button class="lesson" data-chapter="${chapter.id}" aria-pressed="${state.chapter===chapter}">${chapter.name}</button>`).join("");
+ $("overview").hidden = !state.chapter;
+}
+
+function loadChapter(id, scroll=true) {
+ halt();
+ state.chapter = chapterById[id] ?? null;
+ state.route = state.chapter?.routes[0] ?? null;
+ state.view = state.chapter?.views[0] ?? "overview";
+ state.step = 0;
+ state.compare = null;
+ state.elapsed = 0;
+ renderNavigation();
+ renderChapter();
+ renderFigure();
+ renderRoutes();
+ setStatus(state.chapter?.name ?? "颈部地标总览");
+ if (scroll) {
+  moveToStudy();
+  $("scene-title").focus({preventScroll:true});
+ }
+}
+
+function renderChapter() {
+ const chapter = state.chapter;
+ $("below").hidden = !chapter;
+ $("detail-title").textContent = chapter ? "沿着路线看" : "在图上认位置";
+ $("detail-intro").textContent = chapter?.intro ?? "先看清五个地标，再从上方选一个章节。";
+ $("routes").hidden = !chapter;
+ if (!chapter) {
+  $("route-info").innerHTML = `<div class="notes">${overviewText.map(note).join("")}</div>`;
+  return;
+ }
+ $("notes").innerHTML = chapter.notes.map(note).join("")+`<p class="micro">教材${chapter.source}</p>`;
+ $("quiz").innerHTML = chapter.quiz.map((question,index) => `<div class="question" data-question="${index}">
+  <p id="question-${index}">${question.ask}</p>
+  <div class="answers" role="group" aria-labelledby="question-${index}">${question.options.map((answer,option) =>
+   `<button class="choice" data-option="${option}" aria-pressed="false">${answer}</button>`).join("")}</div>
+  <div class="feedback" role="status"></div><button class="plain locate" data-locate="${index}" hidden>回到图中看答案</button>
+ </div>`).join("");
+}
+
+function renderFigure() {
+ const figure = currentFigure();
+ $("scene-title").textContent = figure.title;
+ $("orientation").textContent = figure.orientation;
+ $("scene-caption").textContent = figure.caption;
+ $("scene-tools").innerHTML = (state.chapter?.views.length>1 ? state.chapter.views : [])
+  .map(id => chip(figures[id].name,"view",id,state.view)).join("");
+ $("scene-tools").hidden = !$("scene-tools").childElementCount;
+ $("duct-key").hidden = state.view!=="jaw";
+ $("stage").innerHTML = `<svg class="drawn" viewBox="0 0 480 390" role="${state.chapter?"img":"group"}" aria-labelledby="svg-title svg-description">
+  <title id="svg-title">${figure.title}</title><desc id="svg-description">${figure.orientation}。 ${figure.caption}</desc>
+  <defs><pattern id="paper-grid" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M20 0H0V20" fill="none" stroke="#839284" stroke-width=".55" opacity=".18"/></pattern></defs>
+  <rect x="0" y="0" width="480" height="390" fill="url(#paper-grid)"/>
+  ${figure.art()}<g id="trace" aria-hidden="true"></g>
+ </svg>`;
+ renderTrace();
+}
+
+function renderRoutes() {
+ if (!state.chapter) {
+  $("routes").replaceChildren();
+  updateControls();
+  return;
+ }
+ $("routes").innerHTML = state.chapter.routes.map(route =>
+  `<button class="route" data-route="${route.id}" aria-pressed="${state.route===route}" style="${cssColor(route.type)}"><i class="dot" aria-hidden="true"></i>${route.name}</button>`).join("");
+ renderRouteInfo();
+}
+
+function renderRouteInfo() {
+ const route = state.route;
+ if (!route) {
+  $("route-info").innerHTML = "<p>点上方任何一条路线，即可回到它的走向图。</p>";
+ } else {
+  $("route-info").innerHTML = `<h3>${route.name}</h3><p>${route.purpose}</p><p class="micro">教材${route.source}</p>
+   <div class="steps" aria-label="路线步骤">${route.steps.map((step,index) => `<button class="step" data-step="${index}">
+    <span class="num" aria-hidden="true">${index+1}</span><span><b>${step.title}</b><small>${step.text}</small></span>
+   </button>`).join("")}</div>`;
+ }
+ updateControls();
+}
+
+function changeView(id) {
+ halt();
+ state.view = id;
+ state.route = state.chapter.routes.find(route=>route.view===id) ?? null;
+ state.step = 0;
+ state.compare = null;
+ state.elapsed = 0;
+ renderFigure();
+ renderRoutes();
+ setStatus(currentFigure().title);
+ $("scene-tools").querySelector(`[data-view="${id}"]`)?.focus({preventScroll:true});
+}
+
+function selectRoute(id,step=0,compare=null) {
+ const chosen = state.chapter?.routes.find(route=>route.id===id);
+ if (!chosen) return;
+ halt();
+ const switchView = state.view!==chosen.view;
+ state.route = chosen;
+ state.step = step;
+ state.compare = compare;
+ state.elapsed = 0;
+ state.view = chosen.view;
+ if (switchView) renderFigure();
+ else renderTrace();
+ $("routes").querySelectorAll("[data-route]").forEach(button=>button.setAttribute("aria-pressed",String(button.dataset.route===id)));
+ renderRouteInfo();
+ setStatus(chosen.name + "。 " + chosen.steps[step].title);
+}
+
+function changeStep(index) {
+ const route = state.route;
+ if (!route || index<0 || index>=route.steps.length) return;
+ state.step = index;
+ state.elapsed = 0;
+ state.compare = null;
+ renderTrace();
+ updateControls();
+ setStatus(route.steps[index].title);
+}
+
+function updateControls() {
+ const route = state.route;
+ $("controls").hidden = !route;
+ $("stage-step").hidden = !route;
+ if (!route) return;
+ const last = state.step===route.steps.length-1;
+ $("prev").disabled = state.step===0;
+ $("next").disabled = last;
+ $("play").textContent = state.playing ? "Ⅱ 暂停" : "▶ 播放";
+ $("play").setAttribute("aria-label",state.playing?"暂停路线":"播放路线");
+ $("counter").textContent = `第 ${state.step+1} / ${route.steps.length} 步`;
+ const step = route.steps[state.step];
+ $("stage-step").innerHTML = `<b>${step.title}</b>。${step.text}`;
+ $("route-info").querySelectorAll("[data-step]").forEach((button,index) => {
+  if (index===state.step) button.setAttribute("aria-current","step");
+  else button.removeAttribute("aria-current");
+ });
+}
+
+function svgElement(name, attrs) {
+ const node = document.createElementNS(NS,name);
+ for (const [key,value] of Object.entries(attrs)) node.setAttribute(key,value);
+ return node;
+}
+
+function segments(route, step, index) {
+ // Split this route at the crossing so the deep portion has an explicit line style.
+ if (route.id==="phrenic" && index===2) return [
+  {d:"M175 242 Q171 256 166 269"}, {d:"M166 269 Q161 283 156 293",deep:true}, {d:"M156 293 L145 331"}
+ ];
+ const deep = (route.id==="suba" && index===1) || (route.id==="linguala" && index===1) ||
+  (route.id==="ita" && index===1) || (route.id==="vagus" && index!==1);
+ return step.paths.map(d=>({d,deep}));
+}
+
+function renderTrace() {
+ const layer = $("trace");
+ layer.replaceChildren();
+ traceFrame = [];
+ if (!state.route) return;
+ const visible = state.chapter.routes.filter(route=>route.view===state.view);
+ const ordered = [...visible.filter(route=>route!==state.route),state.route];
+ for (const route of ordered) {
+  route.steps.forEach((step,index) => {
+   const selected = route===state.route;
+   const comparison = state.compare?.id===route.id && state.compare.step===index;
+   const active = (selected && index===state.step) || comparison;
+   const progress = active?"active":selected?(index<state.step?"done":"pending"):"muted";
+   for (const {d,deep} of segments(route,step,index)) {
+    const color = colors[route.type];
+    const lineNode = svgElement("path",{d,stroke:color,"stroke-width":active?4.7:selected?3.4:2.8,
+     class:`trace ${route.type} ${progress}${deep?" deep":""}`});
+    layer.append(lineNode);
+    if (!active) continue;
+    const length = lineNode.getTotalLength();
+    const end = lineNode.getPointAtLength(length);
+    const flow = route.type==="artery" || route.type==="vein" || route.type==="lymph";
+    const marker = flow ? svgElement("path",{d:"M-4 -3 L0 0 L-4 3",fill:"none",stroke:color,
+     "stroke-width":"2","stroke-linecap":"round","stroke-linejoin":"round",class:"flow"}) :
+     svgElement("circle",{cx:0,cy:0,r:3,fill:color,class:"flow"});
+    layer.append(svgElement("circle",{cx:end.x,cy:end.y,r:3.6,stroke:color,class:"endpoint"}),marker);
+    const item = {lineNode,length,marker,flow,comparison};
+    traceFrame.push(item);
+    placeMarker(item,0.7);
+   }
+  });
+ }
+}
+
+function placeMarker({lineNode,length,marker,flow},fraction) {
+ const point = lineNode.getPointAtLength(length*fraction);
+ const next = lineNode.getPointAtLength(Math.min(length,length*fraction+1.5));
+ const angle = flow ? Math.atan2(next.y-point.y,next.x-point.x)*180/Math.PI : 0;
+ marker.setAttribute("transform",`translate(${point.x} ${point.y}) rotate(${angle})`);
+}
+
+function halt() {
+ state.playing = false;
+ if (state.raf) cancelAnimationFrame(state.raf);
+ state.raf = 0;
+}
+
+function start() {
+ if (!state.route || state.playing) return;
+ if (state.elapsed>=frameDuration) changeStep(0);
+ state.playing = true;
+ updateControls();
+ let previous = 0;
+ const tick = time => {
+  state.elapsed += previous ? Math.min(time-previous,100) : 0;
+  previous = time;
+  if (state.elapsed>=frameDuration) {
+   if (state.step+1>=state.route.steps.length) {
+    halt();
+    traceFrame.forEach(item=>placeMarker(item,.7));
+    updateControls();
+    setStatus("播放完成。");
+    return;
+   }
+   changeStep(state.step+1);
+  }
+  if (!reduced.matches) {
+   const fraction = .11+.78*((state.elapsed%1800)/1800);
+   traceFrame.forEach(item=>placeMarker(item,item.comparison ? .7 : fraction));
+  }
+  state.raf = requestAnimationFrame(tick);
+ };
+ state.raf = requestAnimationFrame(tick);
+}
+
+function manualStep(index) {
+ halt();
+ changeStep(index);
+ updateControls();
+}
+
+function answer(button) {
+ const panel = button.closest("[data-question]");
+ const question = state.chapter.quiz[Number(panel.dataset.question)];
+ const option = Number(button.dataset.option);
+ const correct = option===question.correct;
+ const choices = panel.querySelectorAll("[data-option]");
+ choices.forEach((choice,index)=>{
+  choice.classList.toggle("correct",index===question.correct);
+  choice.classList.toggle("wrong",index===option && !correct);
+  choice.setAttribute("aria-pressed",String(index===option));
+ });
+ panel.querySelector(".feedback").textContent = (correct?"答对了。":"再看一下这个关系。")+question.reason;
+ panel.querySelector("[data-locate]").hidden = false;
+ highlightAnswer(question);
+}
+
+function highlightAnswer(question) {
+ const compare = question.route==="suba" ? {id:"plexus",step:1} : null;
+ selectRoute(question.route,question.step,compare);
+}
+
+$("lessons").addEventListener("click",event=>{
+ const button = event.target.closest("[data-chapter]");
+ if (button) loadChapter(button.dataset.chapter);
+});
+$("stage").addEventListener("click",event=>{
+ const button = event.target.closest("[data-chapter]");
+ if (button) loadChapter(button.dataset.chapter);
+});
+$("stage").addEventListener("keydown",event=>{
+ const button = event.target.closest("[data-chapter]");
+ if (button && ["Enter"," "].includes(event.key)) {
+  event.preventDefault();
+  loadChapter(button.dataset.chapter);
+ }
+});
+$("overview").addEventListener("click",()=>{loadChapter(null,false);window.scrollTo(0,0);});
+$("routes").addEventListener("click",event=>{
+ const button = event.target.closest("[data-route]");
+ if (button) selectRoute(button.dataset.route);
+});
+$("scene-tools").addEventListener("click",event=>{
+ const button = event.target.closest("[data-view]");
+ if (button && state.view!==button.dataset.view) changeView(button.dataset.view);
+});
+$("route-info").addEventListener("click",event=>{
+ const button = event.target.closest("[data-step]");
+ if (button) manualStep(Number(button.dataset.step));
+});
+$("play").addEventListener("click",()=>{
+ if (state.playing) { halt(); updateControls(); }
+ else start();
+});
+$("prev").addEventListener("click",()=>manualStep(state.step-1));
+$("next").addEventListener("click",()=>manualStep(state.step+1));
+$("replay").addEventListener("click",()=>{ manualStep(0); start(); });
+$("quiz").addEventListener("click",event=>{
+ const option = event.target.closest("[data-option]");
+ const locate = event.target.closest("[data-locate]");
+ if (option) answer(option);
+ if (locate) {
+  highlightAnswer(state.chapter.quiz[Number(locate.dataset.locate)]);
+  moveToStudy();
+  $("scene-title").focus({preventScroll:true});
+ }
+});
+document.addEventListener("visibilitychange",()=>{
+ if (document.hidden && state.playing) { halt(); updateControls(); }
+});
+if (narrow.addEventListener) narrow.addEventListener("change",moveRoutePicker);
+else narrow.addListener(moveRoutePicker);
+$("scene-title").tabIndex = -1;
+moveRoutePicker();
+loadChapter(null,false);
+
+</script>
+</body>
+</html>
+
